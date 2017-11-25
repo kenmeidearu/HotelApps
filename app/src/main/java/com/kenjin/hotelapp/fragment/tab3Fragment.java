@@ -10,8 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.kenjin.hotelapp.PreviewActivity;
+import com.kenjin.hotelapp.activity.PreviewActivity;
 import com.kenjin.hotelapp.R;
 
 import java.util.Comparator;
@@ -44,12 +45,12 @@ public class tab3Fragment extends Fragment {
         });
         lvItem.setAdapter(adapter1);
         lvItem.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);//khusus item cheked
-        lvItem.setItemChecked(0,true);
+        //lvItem.setItemChecked(0,true);
         lvItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Toast.makeText(getApplicationContext(), typeMObil[position], Toast.LENGTH_SHORT).show();
-                CheckedTextView item = (CheckedTextView) view;//khusus item checked
+               // CheckedTextView item = (CheckedTextView) view;//khusus item checked
+                Toast.makeText(getActivity(), kelengkapan[position], Toast.LENGTH_SHORT).show();
             }
         });
         return  view;

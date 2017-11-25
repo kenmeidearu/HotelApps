@@ -8,16 +8,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PreviewActivity" />
-        <activity android:name=".BookActivity" />
-        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".activity.PreviewActivity" />
+        <activity android:name=".activity.BookActivity" />
+        <activity android:name=".activity.HistoryActivity" />
+        <activity android:name=".activity.SurveyActivity" />
+        <activity android:name=".activity.ResultSurveyActivity"></activity>
     </application>
 
 </manifest>
