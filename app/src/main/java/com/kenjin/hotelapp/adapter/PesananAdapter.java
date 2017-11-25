@@ -20,8 +20,9 @@ public class PesananAdapter extends BaseAdapter
 {
     static class Holder
     {
-        TextView nama;
+        TextView nama,lamapesan;
         ImageView thumb;
+
     }
 
     private LayoutInflater inflater;
@@ -64,6 +65,7 @@ public class PesananAdapter extends BaseAdapter
                     .findViewById(R.id.name_contact);
             holder.thumb = (ImageView) convertView
                     .findViewById(R.id.thumb_contact);
+            holder.lamapesan= (TextView) convertView.findViewById(R.id.lama_pesan);
 
             convertView.setTag(holder);
         } else
@@ -73,6 +75,7 @@ public class PesananAdapter extends BaseAdapter
 
         holder.nama.setText(listPesanans.get(position).getNama());
         holder.thumb.setBackgroundResource(R.mipmap.ic_launcher);
+        holder.lamapesan.setText(listPesanans.get(position).getLamainap()+" hari");
 
         return convertView;
     }
