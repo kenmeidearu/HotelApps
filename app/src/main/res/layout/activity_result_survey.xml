@@ -11,13 +11,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:text="Terimakasih sudah mengikut pelatihan"/>
     <TextView
         android:id="@+id/hasilsurvey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28dp"
+        android:textSize="28sp"
         android:text="hasilsurvey"/>
 </LinearLayout>
