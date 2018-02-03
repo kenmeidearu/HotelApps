@@ -19,12 +19,14 @@
         android:id="@+id/name_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:text="tes1"/>
     <TextView
         android:id="@+id/lama_pesan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
+        android:text="tes"
         />
 
 </LinearLayout>

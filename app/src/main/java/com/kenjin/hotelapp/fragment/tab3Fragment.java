@@ -23,12 +23,11 @@ import java.util.Comparator;
 public class tab3Fragment extends Fragment {
     private ListView lvItem;
     private String[] kelengkapan = new String[]{"Bantal", "Kasur Double", "TV", "Kulkas", "Almari",
-            "Shower", "Internet" };/**/
+            "Shower", "Internet" };
 
     public tab3Fragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +35,8 @@ public class tab3Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_tab3, container, false);
         lvItem = (ListView) view.findViewById(R.id.lv_item);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(((PreviewActivity) getActivity()), android.R.layout.simple_list_item_checked, kelengkapan);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(((PreviewActivity) getActivity()),
+                android.R.layout.simple_list_item_checked, kelengkapan);
         adapter1.sort(new Comparator<String>() {
             @Override
             public int compare(String lhs, String rhs) {
@@ -54,7 +54,5 @@ public class tab3Fragment extends Fragment {
             }
         });
         return  view;
-
     }
-
 }

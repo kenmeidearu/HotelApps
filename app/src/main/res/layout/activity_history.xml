@@ -16,7 +16,7 @@
 
     <TextView
         android:id="@+id/empty"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/listview_history"
         android:layout_marginLeft="10dp"

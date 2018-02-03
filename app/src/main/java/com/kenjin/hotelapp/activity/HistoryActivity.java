@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.kenjin.hotelapp.R;
 import com.kenjin.hotelapp.adapter.PesananAdapter;
@@ -29,13 +30,14 @@ public class HistoryActivity extends AppCompatActivity {
 
         if (db.isContactHasData())
         {
-            adapter = new PesananAdapter(this, db.getAllContact());
+            adapter = new PesananAdapter(this, db.getAllPesanan());
             lv.setAdapter(adapter);
         }
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Toast.makeText(HistoryActivity.this,"Item Selected "+ position,
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }

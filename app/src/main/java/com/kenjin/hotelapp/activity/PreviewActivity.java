@@ -34,7 +34,8 @@ public class PreviewActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
             Log.e("Home pressed","home presed");
-            Toast.makeText(PreviewActivity.this,"kembali ke menu utama",Toast.LENGTH_SHORT).show();
+            Toast.makeText(PreviewActivity.this,"kembali ke menu utama",
+                    Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
         return super.onOptionsItemSelected(menuItem);

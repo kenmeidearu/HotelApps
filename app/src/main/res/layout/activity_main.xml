@@ -80,7 +80,7 @@
                     android:layout_marginBottom="15dp"
                     android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:text="Good resort with pool in your room for your holiday with your wife"
+                    android:text="@string/textdesc"
                     android:textColor="@color/primary_text"
                     android:textSize="15sp"
                     android:textStyle="normal" />
@@ -152,4 +152,5 @@
             android:textColor="@android:color/white" />
 
     </LinearLayout>
+
 </RelativeLayout>

@@ -28,10 +28,10 @@ public class PesananAdapter extends BaseAdapter
     private LayoutInflater inflater;
     private List<Pesanan> listPesanans;
 
-    public PesananAdapter(Context context, List<Pesanan> listContacts)
+    public PesananAdapter(Context context, List<Pesanan> pesanan)
     {
         inflater = LayoutInflater.from(context);
-        this.listPesanans = listContacts;
+        this.listPesanans = pesanan;
     }
 
     @Override
@@ -61,8 +61,7 @@ public class PesananAdapter extends BaseAdapter
             convertView = inflater.inflate(R.layout.single_contact, null);
 
             holder = new Holder();
-            holder.nama = (TextView) convertView
-                    .findViewById(R.id.name_contact);
+            holder.nama = (TextView) convertView.findViewById(R.id.name_contact);
             holder.thumb = (ImageView) convertView
                     .findViewById(R.id.thumb_contact);
             holder.lamapesan= (TextView) convertView.findViewById(R.id.lama_pesan);

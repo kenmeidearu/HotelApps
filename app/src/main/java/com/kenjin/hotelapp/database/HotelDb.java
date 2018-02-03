@@ -77,7 +77,6 @@ public class HotelDb extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db)
     {
         // TODO Auto-generated method stub
-        //Utils.TRACE("ContactDB", "" + SQL_CREATE_CONTACT);
         db.execSQL(SQL_CREATE_PESANAN);
 
 
@@ -90,17 +89,27 @@ public class HotelDb extends SQLiteOpenHelper
         onCreate(db);
     }
 
-    public List<Pesanan> getAllContact()
+    public boolean addPesanan(Pesanan data)
     {
-        List<Pesanan> listContacts = new ArrayList<Pesanan>();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN.nama, data.getNama());
+        values.put(COLUMN.email, data.getEmail());
+        values.put(COLUMN.nomor, data.getNumber());
+        values.put(COLUMN.lamaInap,data.getLamainap());
+        return (db.insert(TB_PESANAN, null, values)) != -1;
+    }
 
+    public List<Pesanan> getAllPesanan()
+    {
+        List<Pesanan> listPesanan = new ArrayList<Pesanan>();
         Cursor cursor = db.query(TB_PESANAN, new String[] { COLUMN.id,
-                        COLUMN.nama, COLUMN.nomor, COLUMN.email,COLUMN.lamaInap }, null, null, null,
-                null, COLUMN.nama);
+                        COLUMN.nama, COLUMN.nomor, COLUMN.email,COLUMN.lamaInap },
+                        null,null, null,
+                        null, COLUMN.nama);
         cursor.moveToFirst();
         do
         {
-            listContacts
+            listPesanan
                     .add(new Pesanan(cursor.getInt(cursor
                             .getColumnIndexOrThrow(COLUMN.id)), cursor
                             .getString(cursor
@@ -113,7 +122,7 @@ public class HotelDb extends SQLiteOpenHelper
                                     .getColumnIndexOrThrow(COLUMN.lamaInap))
                         ));
         } while (cursor.moveToNext());
-        return listContacts;
+        return listPesanan;
     }
 
     public boolean isContactHasData()
@@ -123,17 +132,7 @@ public class HotelDb extends SQLiteOpenHelper
         return (cursor.getCount() > 0) ? true : false;
     }
 
-    public boolean addPesanan(Pesanan pesanan)
-    {
-        ContentValues values = new ContentValues();
 
-        values.put(COLUMN.nama, pesanan.getNama());
-        values.put(COLUMN.email, pesanan.getEmail());
-        values.put(COLUMN.nomor, pesanan.getNumber());
-        values.put(COLUMN.lamaInap,pesanan.getLamainap());
-
-        return ((db.insert(TB_PESANAN, null, values)) != -1) ? true : false;
-    }
 
     public boolean editPesanan(Pesanan pesanan)
     {

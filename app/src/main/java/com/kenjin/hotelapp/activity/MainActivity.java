@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.kenjin.hotelapp.R;
 
 public class MainActivity extends AppCompatActivity {
-    Button bbook,breview,bmaps,bsurvey;
+    Button bbook,breview,bhistorys,bsurvey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bbook=(Button) findViewById(R.id.btnBook);
         breview=(Button) findViewById(R.id.btnReview);
-        bmaps=(Button) findViewById(R.id.btnMaps);
+        bhistorys=(Button) findViewById(R.id.btnMaps);
         bsurvey=(Button)findViewById(R.id.btnSurvey);
+
 
         bbook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        bmaps.setOnClickListener(new View.OnClickListener() {
+        bhistorys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), HistoryActivity.class);

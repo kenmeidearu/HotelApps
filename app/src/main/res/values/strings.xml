@@ -8,5 +8,14 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment, selamat mencoba kamar yang baru</string>
+    <string name="textdesc">Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+                            Good resort with pool in your room for your holiday with your wife,
+    </string>
 </resources>

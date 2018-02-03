@@ -24,7 +24,7 @@ public class SurveyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(SurveyActivity.this,ResultSurveyActivity.class);
                 intent.putExtra("datasurvey",isisurvey.getText().toString());
-                intent.putExtra(ResultSurveyActivity.DATAKIRIM,1);
+                intent.putExtra(ResultSurveyActivity.DATAKIRIM,3);
                 startActivity(intent);
             }
         });

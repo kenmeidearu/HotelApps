@@ -35,14 +35,16 @@ public class BookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String txtemail = "null";
+                String hari="1";
                 if (!TextUtils.isEmpty(nama.getText().toString())
                         && !TextUtils.isEmpty(phone.getText().toString())) {
                     if (!TextUtils.isEmpty(email.getText().toString()))
                         txtemail = email.getText().toString();
-
-                    if (db.addPesanan(new Pesanan(nama.getText().toString(), phone
-                            .getText().toString(), txtemail, lama.getText().toString()))) {
-
+                    if(!TextUtils.isEmpty(lama.getEditableText()))
+                        hari=lama.getEditableText().toString();
+                    Pesanan data=new Pesanan(nama.getText().toString(), phone.getText().toString(),
+                                             txtemail, hari);
+                    if (db.addPesanan(data)) {
                         startActivity(new Intent(BookActivity.this, MainActivity.class));
                         finish();
                     } else {
